@@ -5,8 +5,6 @@ It is about **thinking clearly, choosing the right pattern, and optimizing step 
 
 This guide explains **exactly how interviewers expect you to think** while solving DSA problems.
 
----
-
 ## 📌 Why Most People Fail in DSA Interviews
 
 Common mistakes:
@@ -18,8 +16,6 @@ Common mistakes:
 
 👉 Interviews reject **thinking**, not syntax.
 
----
-
 ## 🧠 The Correct Mindset for DSA
 
 Before solving any problem, remember:
@@ -28,13 +24,9 @@ Before solving any problem, remember:
 
 Questions look new, but **patterns repeat**.
 
----
-
 ## 🪜 Step-by-Step Framework (VERY IMPORTANT)
 
 Always follow these steps in the same order.
-
----
 
 ## 1️⃣ Understand the Problem Completely
 
@@ -55,8 +47,6 @@ Output: maximum sum subarray
 
 Clarify before thinking of solution.
 
----
-
 ## 2️⃣ Identify the Core Pattern
 
 This is the **most critical step**.
@@ -71,8 +61,6 @@ Ask:
 - Graph connections? → Graph traversal
 
 📌 Pattern recognition = interview confidence.
-
----
 
 ## 3️⃣ Think of the Brute Force Solution First
 
@@ -93,8 +81,6 @@ Check all subarrays → O(n²)
 
 Never skip brute force.
 
----
-
 ## 4️⃣ Optimize Step by Step
 
 Ask:
@@ -110,8 +96,6 @@ Examples:
 - Hashing → O(n²) → O(n)
 - Binary Search → O(n) → O(log n)
 - DP → avoid recomputation
-
----
 
 ## 5️⃣ Choose the Best Data Structure
 
@@ -129,8 +113,6 @@ Wrong data structure = wrong solution.
 
 Always justify your choice.
 
----
-
 ## 6️⃣ Dry Run With Example
 
 Before coding:
@@ -143,9 +125,6 @@ Interviewers LOVE dry runs.
 📌 Example:
 arr = [2, 1, 5, 1, 3, 2], k = 3
 window = [2,1,5] → sum = 8
-
-
----
 
 ## 7️⃣ Handle Edge Cases
 
@@ -161,8 +140,6 @@ Always consider:
 📌 Ask yourself:
 > “Will my code break for smallest input?”
 
----
-
 ## 8️⃣ Write Clean & Readable Code
 
 Good code is:
@@ -177,8 +154,6 @@ Bad code:
 - No comments where needed
 
 📌 Interviewers read code like humans.
-
----
 
 ## 9️⃣ Analyze Time & Space Complexity
 
@@ -199,8 +174,6 @@ Never say:
 
 Be confident.
 
----
-
 ## 🔟 Explain Your Solution Clearly (VERY IMPORTANT)
 
 Your explanation should follow this flow:
@@ -213,8 +186,6 @@ Your explanation should follow this flow:
 6. Edge cases
 
 Clear explanation = higher chance of selection.
-
----
 
 ## 🧩 Common DSA Thinking Patterns
 
@@ -249,8 +220,6 @@ Clear explanation = higher chance of selection.
 ### Backtracking
 - Try → explore → undo
 
----
-
 ## ❌ What NOT to Do in Interviews
 
 - Jump directly into code
@@ -258,8 +227,6 @@ Clear explanation = higher chance of selection.
 - Give up early
 - Argue with interviewer
 - Memorize solutions
-
----
 
 ## ✅ What Interviewers Want to See
 
@@ -269,15 +236,11 @@ Clear explanation = higher chance of selection.
 - Clear communication
 - Problem-solving attitude
 
----
-
 ## 🧠 Practice Rule (Golden Rule)
 
 > **Solve fewer problems, but solve them deeply**
 
 1 problem = multiple patterns + variations.
-
----
 
 ## 🎯 Final Advice
 

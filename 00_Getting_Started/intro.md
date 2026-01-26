@@ -5,8 +5,6 @@ It is designed to build a **strong foundation** before diving into problem solvi
 
 If you are new to DSA or restarting your preparation, **start from here**.
 
----
-
 ## 📌 What is Data Structure?
 
 A **Data Structure** is a way to **store, organize, and manage data** efficiently so that operations like:
@@ -26,8 +24,6 @@ can be performed effectively.
 
 👉 Choosing the **right data structure** directly affects performance.
 
----
-
 ## 📌 What is an Algorithm?
 
 An **Algorithm** is a **step-by-step procedure** to solve a specific problem.
@@ -42,8 +38,6 @@ Good algorithms:
 - Finding the maximum element in an array
 - Sorting numbers
 - Searching an element efficiently
-
----
 
 ## 🧠 Why DSA is Important?
 
@@ -60,8 +54,6 @@ DSA is important because:
 
 👉 Almost every top tech company evaluates candidates based on DSA.
 
----
-
 ## 🎯 Role of DSA in Interviews
 
 In interviews, companies do NOT test:
@@ -76,8 +68,6 @@ They test:
 
 DSA is the **filtering stage** of interviews.
 
----
-
 ## 🧩 Difference Between Coding and DSA
 
 | Coding | DSA |
@@ -88,8 +78,6 @@ DSA is the **filtering stage** of interviews.
 | Tool focused | Thinking focused |
 
 👉 You can learn syntax in days, but **DSA builds engineering mindset**.
-
----
 
 ## 🧱 Building Blocks of DSA
 
@@ -103,8 +91,6 @@ Before solving problems, you must understand:
 
 This section prepares you for all of that.
 
----
-
 ## 📚 Topics Covered in Getting Started
 
 ### 1️⃣ Introduction
@@ -112,8 +98,6 @@ This section prepares you for all of that.
 - Why DSA matters
 - How DSA is used in real systems
 - Interview expectations
-
----
 
 ### 2️⃣ Time and Space Complexity
 - Why performance matters
@@ -124,8 +108,6 @@ This section prepares you for all of that.
 
 👉 This is one of the **most important interview topics**.
 
----
-
 ### 3️⃣ How to Approach DSA Problems
 - Problem-solving framework
 - Pattern recognition
@@ -134,8 +116,6 @@ This section prepares you for all of that.
 - Explaining solutions clearly in interviews
 
 👉 This topic teaches **how to think**, not just code.
-
----
 
 ## 🧠 How to Study DSA Using This Repository
 
@@ -150,8 +130,6 @@ Follow this order:
 
 📌 Do not skip fundamentals.
 
----
-
 ## ❌ Common Beginner Mistakes
 
 Avoid these:
@@ -161,8 +139,6 @@ Avoid these:
 - Not revising old problems
 - Solving without understanding patterns
 
----
-
 ## ✅ Recommended Learning Strategy
 
 - Focus on **patterns**, not number of questions
@@ -171,16 +147,12 @@ Avoid these:
 - Practice writing clean code
 - Revise frequently
 
----
-
 ## 🎯 Final Note
 
 DSA is not about intelligence.  
 It is about **consistency, clarity, and structured thinking**.
 
 If your foundation is strong, advanced topics become easy.
-
----
 
 ## 🚀 Next Step
 

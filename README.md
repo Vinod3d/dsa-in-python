@@ -41,7 +41,7 @@ This repository focuses on:
 
 | No. | Topic |
 |----|------|
-| 1 | [Getting Started](#1-getting-started) |
+| 1 | [Getting Started](#00-getting-started) |
 | 2 | [Arrays](#2-arrays) |
 | 3 | [Strings](#3-strings) |
 | 4 | [Linked List](#4-linked-list) |

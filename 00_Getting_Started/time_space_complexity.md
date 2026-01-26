@@ -7,8 +7,6 @@ Understanding **Time and Space Complexity** is crucial in DSA because it tells u
 
 In interviews, **good logic + bad complexity = rejection**.
 
----
-
 ## 📌 What is Time Complexity?
 
 **Time Complexity** measures:
@@ -20,8 +18,6 @@ It measures **growth rate**.
 📌 Focus is on:
 - Number of operations
 - Relation with input size (n)
-
----
 
 ## 📌 What is Space Complexity?
 
@@ -35,8 +31,6 @@ Includes:
 
 👉 Input memory is usually not counted.
 
----
-
 ## 🧠 Why Time & Space Complexity Matters
 
 - Computers have limited resources
@@ -48,8 +42,6 @@ Example:
 - `n = 10⁵`
 - O(n²) → ❌ too slow
 - O(n log n) → ✅ acceptable
-
----
 
 ## 📊 Big-O Notation (MOST IMPORTANT)
 
@@ -65,8 +57,6 @@ Big-O describes **worst-case performance**.
 | O(2ⁿ) | Exponential | Subsets |
 | O(n!) | Factorial | Permutations |
 
----
-
 ## 🚦 Order of Growth (Fast → Slow)
 
 ```
@@ -76,8 +66,6 @@ O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
 ````
 
 👉 Interviewers expect you to know this order.
-
----
 
 ## 📌 Best, Average & Worst Case
 
@@ -93,19 +81,14 @@ O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
 
 👉 Big-O usually considers **worst case**.
 
----
-
 ## 🧮 How to Calculate Time Complexity
 
 ### 1️⃣ Single Loop
 ```python
 for i in range(n):
     print(i)
-````
-
+```
 ⏱️ Time: **O(n)**
-
----
 
 ### 2️⃣ Nested Loop
 
@@ -117,8 +100,6 @@ for i in range(n):
 
 ⏱️ Time: **O(n²)**
 
----
-
 ### 3️⃣ Loop with Halving
 
 ```python
@@ -127,8 +108,6 @@ while n > 0:
 ```
 
 ⏱️ Time: **O(log n)**
-
----
 
 ### 4️⃣ Multiple Loops (Sequential)
 
@@ -141,8 +120,6 @@ for j in range(n):
 
 ⏱️ Time: **O(n)**
 (Not O(2n), constants ignored)
-
----
 
 ## ✂️ Ignoring Constants & Lower Terms
 
@@ -158,8 +135,6 @@ Examples:
 
 👉 Focus on dominant term.
 
----
-
 ## 📦 Space Complexity Examples
 
 ### Constant Space
@@ -170,8 +145,6 @@ sum = 0
 
 📦 Space: **O(1)**
 
----
-
 ### Extra Array
 
 ```python
@@ -179,8 +152,6 @@ arr = [0] * n
 ```
 
 📦 Space: **O(n)**
-
----
 
 ### Recursive Call Stack
 
@@ -193,8 +164,6 @@ def func(n):
 
 📦 Space: **O(n)** (call stack)
 
----
-
 ## 🔥 Why O(n²) is Bad
 
 For `n = 10⁵`:
@@ -205,8 +174,6 @@ For `n = 10⁵`:
 📌 Interviewers often ask:
 
 > “Can you optimize this?”
-
----
 
 ## ⚡ Time–Space Tradeoff
 
@@ -221,8 +188,6 @@ Example:
 
 👉 This tradeoff is **interview favorite**.
 
----
-
 ## 🧠 Complexity of Common DSA Operations
 
 | Operation             | Complexity |
@@ -234,8 +199,6 @@ Example:
 | Queue enqueue/dequeue | O(1)       |
 | Tree traversal        | O(n)       |
 | Graph traversal       | O(V + E)   |
-
----
 
 ## 🎯 How Interviewers Expect You to Answer
 
@@ -257,16 +220,12 @@ Then explain **why**.
 
 > “We traverse array once, so O(n)”
 
----
-
 ## ❌ Common Mistakes
 
 * Forgetting space complexity
 * Saying wrong Big-O
 * Ignoring recursion stack
 * Confusing O(log n) and O(n)
-
----
 
 ## ✅ Interview Tips (VERY IMPORTANT)
 
@@ -276,15 +235,11 @@ Then explain **why**.
 * Be confident and clear
 * Practice analyzing code daily
 
----
-
 ## 🧠 Golden Rule
 
 > **First write correct code, then optimize it**
 
 Correct + optimized = selection.
-
----
 
 ## 🎯 Final Summary
 

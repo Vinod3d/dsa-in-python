@@ -9,8 +9,6 @@ This repository focuses on:
 - Simple and interview-friendly explanations
 - Long-term revision and mastery
 
----
-
 ## 📌 Why This Repository?
 
 - Covers **all DSA topics required for any interview**
@@ -21,8 +19,6 @@ This repository focuses on:
   - Freshers
   - Working professionals
   - FAANG aspirants
-
----
 
 ## 🧠 How to Use This Repo Effectively
 
@@ -35,7 +31,6 @@ This repository focuses on:
    - Time & Space Complexity
 5. Revise using `Revision_and_CheatSheets` before interviews
 
----
 
 ## 📂 Repository Structure (Index)
 
@@ -67,7 +62,6 @@ This repository focuses on:
 | 24 | [Interview Mixed Problems](#24-interview-mixed-problems) |
 | 25 | [Revision & Cheat Sheets](#25-revision--cheat-sheets) |
 
----
 
 ## 1️⃣ Getting Started
 - Introduction to DSA
@@ -75,7 +69,6 @@ This repository focuses on:
 - Time & Space Complexity
 - Interview problem-solving mindset
 
----
 
 ## 2️⃣ Arrays
 - Traversal techniques
@@ -83,7 +76,6 @@ This repository focuses on:
 - Subarray problems
 - Optimization tricks
 
----
 
 ## 3️⃣ Strings
 - Basic string manipulation
@@ -94,7 +86,6 @@ This repository focuses on:
   - Rabin-Karp
   - Manacher’s Algorithm
 
----
 
 ## 4️⃣ Linked List
 - Singly & Doubly Linked List
@@ -102,7 +93,6 @@ This repository focuses on:
 - Cycle detection
 - Reversal patterns
 
----
 
 ## 5️⃣ Stack
 - Stack implementation
@@ -110,22 +100,16 @@ This repository focuses on:
 - Next greater/smaller element
 - Expression problems
 
----
-
 ## 6️⃣ Queue
 - Simple queue
 - Circular queue
 - Deque
 - Sliding window applications
 
----
-
 ## 7️⃣ Recursion
 - Base case & recursion tree
 - Tail recursion
 - Recursive problem patterns
-
----
 
 ## 8️⃣ Sorting Algorithms
 - Bubble, Selection, Insertion
@@ -135,7 +119,6 @@ This repository focuses on:
 - Counting & Radix Sort
 - Stability & in-place concepts
 
----
 
 ## 9️⃣ Binary Search
 - Classic binary search
@@ -143,28 +126,24 @@ This repository focuses on:
 - Binary search on answer
 - Rotated sorted array problems
 
----
 
 ## 🔟 Two Pointers
 - Pair & triplet problems
 - Opposite direction traversal
 - Duplicate handling
 
----
 
 ## 1️⃣1️⃣ Sliding Window
 - Fixed-size window
 - Variable-size window
 - Maximum / minimum window problems
 
----
 
 ## 1️⃣2️⃣ Hashing
 - Frequency counting
 - Fast lookup problems
 - Anagram & duplicate detection
 
----
 
 ## 1️⃣3️⃣ Matrix / 2D Problems
 - Matrix traversal
@@ -172,7 +151,6 @@ This repository focuses on:
 - Grid-based BFS/DFS
 - DP on matrix
 
----
 
 ## 1️⃣4️⃣ Trees
 - Tree traversals (DFS, BFS)
@@ -180,21 +158,18 @@ This repository focuses on:
 - Views of binary tree
 - Lowest Common Ancestor (LCA)
 
----
 
 ## 1️⃣5️⃣ Binary Search Tree
 - Insertion & deletion
 - Validation
 - BST-based optimizations
 
----
 
 ## 1️⃣6️⃣ Heaps / Priority Queue
 - Min & Max heap
 - K largest / smallest elements
 - Heap-based optimizations
 
----
 
 ## 1️⃣7️⃣ Graphs
 - BFS & DFS
@@ -204,14 +179,12 @@ This repository focuses on:
 - Minimum Spanning Tree
 - Disjoint Set Union (DSU)
 
----
 
 ## 1️⃣8️⃣ Greedy Algorithms
 - Interval scheduling
 - Optimization problems
 - Greedy decision making
 
----
 
 ## 1️⃣9️⃣ Backtracking
 - Subsets & permutations
@@ -219,7 +192,6 @@ This repository focuses on:
 - Sudoku solver
 - Decision tree approach
 
----
 
 ## 2️⃣0️⃣ Dynamic Programming
 - 1D & 2D DP
@@ -228,14 +200,12 @@ This repository focuses on:
 - DP on trees
 - Optimization techniques
 
----
 
 ## 2️⃣1️⃣ Trie
 - Trie implementation
 - Prefix-based problems
 - Dictionary problems
 
----
 
 ## 2️⃣2️⃣ Bit Manipulation
 - XOR tricks
@@ -243,22 +213,17 @@ This repository focuses on:
 - Bit masking
 - Space optimization
 
----
-
 ## 2️⃣3️⃣ Math & Number Theory
 - GCD & LCM
 - Prime numbers & sieve
 - Modulo arithmetic
 - Fast exponentiation
 
----
 
 ## 2️⃣4️⃣ Interview Mixed Problems
 - Pattern-mixed problems
 - Company-wise questions
 - FAANG-style challenges
-
----
 
 ## 2️⃣5️⃣ Revision & Cheat Sheets
 - Pattern summary
@@ -266,7 +231,6 @@ This repository focuses on:
 - Graph algorithms summary
 - Common interview mistakes
 
----
 
 ## 🎯 Final Goal
 
@@ -275,8 +239,6 @@ By completing this repository properly, you will be able to:
 - Write optimized Python solutions
 - Explain your approach confidently
 - Crack DSA interviews at top tech companies
-
----
 
 ## ⭐ If you find this repository helpful
 Give it a ⭐ and share it with others preparing for DSA interviews.

@@ -9,23 +9,23 @@ They improve **logical thinking, loop control, condition handling, and number ma
 
 ## 1️⃣ Count Number of Digits in a Number
 
-### Problem Statement
+#### Problem Statement
 
 User will get number using input `N`, you have to count how many digits it contains.
 
-### Example
+#### Example
 
 ```
 Input:  N = 4567
 Output: 4
 ```
 
-### Approach
+#### Approach
 
 * Repeatedly divide the number by 10.
 * Increment a counter until the number becomes 0.
 
-### Python Code
+#### Python Code
 
 ```python
 def countNum():
@@ -40,12 +40,12 @@ def countNum():
 print(r"Your number have ", countNum(), " digits.")
 ```
 
-### Time Complexity
+#### Time Complexity
 
 * **O(log₁₀ N)**
   Each division by 10 removes one digit.
 
-### Space Complexity
+#### Space Complexity
 
 * **O(1)**
   Only a constant number of variables are used.
@@ -54,23 +54,23 @@ print(r"Your number have ", countNum(), " digits.")
 
 ## 2️⃣ Reverse a Number
 
-### Problem Statement
+#### Problem Statement
 
 Given an integer `N`, reverse its digits.
 
-### Example
+#### Example
 
 ```
 Input:  N = 1234
 Output: 4321
 ```
 
-### Approach
+#### Approach
 
 * Extract the last digit using `% 10`
 * Build the reversed number using multiplication
 
-### Python Code
+#### Python Code
 
 ```python
 def reverse_number(n):
@@ -84,11 +84,11 @@ def reverse_number(n):
 print(reverse_number(12345))
 ```
 
-### Time Complexity
+#### Time Complexity
 
 * **O(log₁₀ N)**
 
-### Space Complexity
+#### Space Complexity
 
 * **O(1)**
 
@@ -96,23 +96,23 @@ print(reverse_number(12345))
 
 ## 3️⃣ Check Palindrome Number
 
-### Problem Statement
+#### Problem Statement
 
 Check whether a number is a palindrome or not.
 
-### Example
+#### Example
 
 ```
 Input:  N = 121
 Output: True
 ```
 
-### Approach
+#### Approach
 
 * Reverse the number
 * Compare with the original number
 
-### Python Code 1
+#### Python Code 1
 
 ```python
 def is_palindrome(n):
@@ -164,23 +164,23 @@ print(isPalindrome("A man, a plan, a canal: Panama"))
 
 ## 4️⃣ Check Prime Number
 
-### Problem Statement
+#### Problem Statement
 
 Check whether a number `N` is prime.
 
-### Example
+#### Example
 
 ```
 Input:  N = 29
 Output: True
 ```
 
-### Optimized Approach
+#### Optimized Approach
 
 * Check divisibility only up to `√N`
 * Skip unnecessary checks
 
-### Python Code
+#### Python Code
 
 ```python
 import math
@@ -205,11 +205,11 @@ class Solution:
 Sieve ka idea samjho
 ```
 
-### Time Complexity
+#### Time Complexity
 
 * **O(N√N)**
 
-### Space Complexity
+#### Space Complexity
 
 * **O(1)**
 
@@ -217,36 +217,50 @@ Sieve ka idea samjho
 
 ## 5️⃣ Find GCD (Greatest Common Divisor)
 
-### Problem Statement
+#### Problem Statement
 
 Find the GCD of two numbers using **Euclidean Algorithm**.
 
-### Example
+#### Example
 
 ```
 Input:  a = 36, b = 24
 Output: 12
 ```
 
-### Approach (Euclidean Algorithm)
+#### Approach (Euclidean Algorithm)
 
 * GCD(a, b) = GCD(b, a % b)
 * Continue until `b = 0`
 
-### Python Code
+#### Python Code 1
+
+```python
+def gcd(a, b):
+    ans = 1
+    for i in range(1, min(a, b) + 1):
+        if a % i == 0 and b % i == 0:
+            ans = i
+    return ans
+
+print(gcd(18, 36))
+```
+#### Python Code 2
 
 ```python
 def gcd(a, b):
     while b != 0:
         a, b = b, a % b
     return a
+    
+print(gcd(18, 36))
 ```
 
-### Time Complexity
+#### Time Complexity
 
 * **O(log min(a, b))**
 
-### Space Complexity
+#### Space Complexity
 
 * **O(1)**
 
@@ -254,29 +268,33 @@ def gcd(a, b):
 
 ## 6️⃣ Find LCM (Least Common Multiple)
 
-### Formula Used
+#### Formula Used
 
 ```
 LCM(a, b) = (a × b) / GCD(a, b)
 ```
 
-### Python Code
+#### Python Code
 
 ```python
-def lcm(a, b):
+def least_common_multiple(a, b):
     def gcd(x, y):
-        while y:
+        while y != 0:
             x, y = y, x % y
         return x
 
-    return (a * b) // gcd(a, b)
+    return abs(a * b) // gcd(a, b)
+
+print(least_common_multiple(4, 6))  # Output: 12
+print(least_common_multiple(15, 20))  # Output: 60
+print(least_common_multiple(3, 5))  # Output: 15
 ```
 
-### Time Complexity
+#### Time Complexity
 
 * **O(log min(a, b))**
 
-### Space Complexity
+#### Space Complexity
 
 * **O(1)**
 

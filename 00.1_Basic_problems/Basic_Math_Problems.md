@@ -299,6 +299,86 @@ print(least_common_multiple(3, 5))  # Output: 15
 * **O(1)**
 
 ---
+## 7️⃣ Convert Number to Roman
+
+
+#### Python Code
+
+```python
+def intToRoman(num: int) -> str:
+        values = [
+            (1000, "M"),
+            (900,  "CM"),
+            (500,  "D"),
+            (400,  "CD"),
+            (100,  "C"),
+            (90,   "XC"),
+            (50,   "L"),
+            (40,   "XL"),
+            (10,   "X"),
+            (9,    "IX"),
+            (5,    "V"),
+            (4,    "IV"),
+            (1,    "I")
+        ]
+
+        res = []
+        for val, sym in values:
+            while num >= val:
+                num -= val
+                res.append(sym)
+        return "".join(res)
+
+print(intToRoman(3999)) # Output: "MMMCMXCIX"
+```
+
+#### Time Complexity
+values list fixed size (13 symbols) ki hai
+
+* **O(1)**
+
+#### Space Complexity
+
+* **O(1)**
+
+---
+## 8️⃣ Convert Roman to Number
+
+#### Python Code
+
+```python
+def romanToInt(s: str) -> int:
+        roman = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        }
+
+        total = 0
+
+        for i in range(len(s)):
+            if i + 1 < len(s) and roman[s[i]] < roman[s[i + 1]]:
+                total -= roman[s[i]]
+            else:
+                total += roman[s[i]]
+
+        return total
+print(romanToInt("MMMMDLXXII"))
+```
+
+#### Time Complexity
+
+* **O(n)**
+
+#### Space Complexity
+
+* **O(1)**
+
+---
 
 ## 7️⃣ Factorial of a Number
 

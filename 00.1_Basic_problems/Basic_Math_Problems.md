@@ -380,84 +380,98 @@ print(romanToInt("MMMMDLXXII"))
 
 ---
 
-## 7️⃣ Factorial of a Number
+## 9️⃣ Factorial of a Number
 
-### Problem Statement
+#### Problem Statement
 
 Find factorial of a number `N`.
 
-### Example
+#### Example
 
 ```
 Input:  N = 5
 Output: 120
 ```
 
-### Python Code
+#### Python Code
 
 ```python
-def factorial(n):
-    result = 1
-    for i in range(1, n + 1):
-        result *= i
-    return result
+def factorial(num):
+    if num < 0:
+        return None
+    if num == 0 or num == 1:
+        return 1
+    return num * factorial(num - 1)
+
+num = int(input("Enter a number to find its factorial: "))
+
+result = factorial(num)
+
+if result is None:
+    print("Factorial is not defined for negative numbers.")
+else:
+    print(f"Factorial of {num} is {result}")
+
 ```
 
-### Time Complexity
+#### Time Complexity
 
 * **O(N)**
 
-### Space Complexity
+#### Space Complexity
 
 * **O(1)**
 
 ---
 
-## 8️⃣ Fibonacci Number (Nth Term)
+## 1️⃣0️⃣ Fibonacci Number (Nth Term)
 
-### Problem Statement
+#### Problem Statement
 
 Find the `N`th Fibonacci number.
 
-### Optimized Iterative Approach
+#### Optimized Iterative Approach
 
-### Python Code
+#### Python Code
 
 ```python
 def fibonacci(n):
-    if n <= 1:
-        return n
-
     a, b = 0, 1
-    for _ in range(2, n + 1):
+    series = []
+    for _ in range(n):
+        series.append(a)
         a, b = b, a + b
-    return b
+    return series
+
+print(fibonacci(10))
+
+# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 ```
 
-### Time Complexity
+#### Time Complexity
 
 * **O(N)**
 
-### Space Complexity
+#### Space Complexity
 
 * **O(1)**
 
 ---
 
-## 9️⃣ Armstrong Number
+## 1️⃣1️⃣ Armstrong Number
 
-### Problem Statement
+#### Problem Statement
 
 Check whether a number is an Armstrong number.
 
-### Example
+#### Example
 
 ```
 Input:  N = 153
 Output: True
 ```
 
-### Python Code
+#### Python Code
 
 ```python
 def is_armstrong(n):
@@ -473,10 +487,10 @@ def is_armstrong(n):
     return total == n
 ```
 
-### Time Complexity
+#### Time Complexity
 
 * **O(log₁₀ N)**
 
-### Space Complexity
+#### Space Complexity
 
 * **O(1)**

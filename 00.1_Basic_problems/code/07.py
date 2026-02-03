@@ -15,11 +15,11 @@ def intToRoman(num: int) -> str:
             (1,    "I")
         ]
 
-        res = []
+        res = ''
         for val, sym in values:
             while num >= val:
                 num -= val
-                res.append(sym)
-        return "".join(res)
+                res += sym
+        return res
 
 print(intToRoman(3999)) # Output: "MMMCMXCIX"

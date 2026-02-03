@@ -11,11 +11,11 @@ def romanToInt(s: str) -> int:
 
         total = 0
 
-        for i in range(len(s)):
-            if i + 1 < len(s) and roman[s[i]] < roman[s[i + 1]]:
+        for i in range(len(s) - 1):
+            if roman[s[i]] < roman[s[i + 1]]:
                 total -= roman[s[i]]
             else:
                 total += roman[s[i]]
-
-        return total
+        
+        return total + roman[s[-1]]
 print(romanToInt("MMMMDLXXII"))  # Output: 58

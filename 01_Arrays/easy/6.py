@@ -28,8 +28,7 @@ class Solution:
         unique_nums = list(set(nums))
         first = second = third = float('-inf')
         for num in unique_nums:
-            if num > first:
-                third = second
+            if num > first: 
                 second = first
                 first = num
             elif first > num > second:

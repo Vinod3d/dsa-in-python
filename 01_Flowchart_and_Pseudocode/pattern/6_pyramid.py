@@ -1,21 +1,19 @@
 # Vertical Pyramid Pattern
 
 def pyramid(n):
-	list = []
-	for i in range(0, n):
-		line = ""
-		for j in range(0, n-i-1):
-			line += " "
-		for k in range(0, 2*i+1):
-			line += "*"
-		list.append(line)
-	return list
+	pyramid = []
+	for i in range(1, n+1):
+		star = '*' * (2*i-1)
+		space = ' ' * (n-i)
+
+		pyramid.append(space + star + space)
+	return pyramid
 		
 
 n = int(input("Enter the number of row"))
 
-list = pyramid(n)
-for line in list:
+pattern = pyramid(n)
+for line in pattern:
 	print(line)
 
 

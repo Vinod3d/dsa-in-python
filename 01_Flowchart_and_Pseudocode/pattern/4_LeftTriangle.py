@@ -11,3 +11,10 @@ list = generateRightTriangle(n)
 
 for line in list:
     print(line)
+
+
+# *
+# **
+# ***
+# ****
+# *****

@@ -14,24 +14,24 @@ def isPalindrome(x: int) -> bool:
 
 
 # Check whether a string is palindrome or not
-def isPalindrome(s: str) -> bool:
-        st = ''.join(ch.lower() for ch in s if ch.isalnum())
-        left = 0
-        right = len(st) - 1
+# def isPalindrome(s: str) -> bool:
+#         st = ''.join(ch.lower() for ch in s if ch.isalnum())
+#         left = 0
+#         right = len(st) - 1
 
-        while left < right:
-            if st[left] != st[right]:
-                return False
-            left += 1
-            right -= 1
-        return True
+#         while left < right:
+#             if st[left] != st[right]:
+#                 return False
+#             left += 1
+#             right -= 1
+#         return True
 
-print(isPalindrome("A man, a plan, a canal: Panama"))
+# print(isPalindrome("A man, a plan, a canal: Panama"))
 
-import re
-def isPalindrome(s: str) -> bool:
-        cleaned_st = re.sub(r'[^a-zA-Z0-9]', '', s)
-        return cleaned_st.lower() == cleaned_st[::-1].lower()
+# import re
+# def isPalindrome(s: str) -> bool:
+#         cleaned_st = re.sub(r'[^a-zA-Z0-9]', '', s)
+#         return cleaned_st.lower() == cleaned_st[::-1].lower()
 
-print(isPalindrome("A man, a plan, a canal: Panama"))
+# print(isPalindrome("A man, a plan, a canal: Panama"))
 

@@ -1,7 +1,5 @@
-from ast import List
 
-
-def buildArray(nums: List[int]):
+def buildArray(nums):
         ans = []
         for i in range(len(nums)):
 

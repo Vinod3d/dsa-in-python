@@ -1,10 +1,8 @@
 # 217. Contains Duplicate
 
-from ast import List
-
 
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate(self, nums) -> bool:
         # Brut force
         n = len(nums)
         for i in range(n):

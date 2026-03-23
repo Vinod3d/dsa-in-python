@@ -1,4 +1,4 @@
-def isTrionic( nums: List[int]) -> bool:
+def isTrionic( nums) -> bool:
         n = len(nums)
         if n <4:
             return False

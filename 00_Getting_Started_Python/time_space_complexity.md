@@ -390,3 +390,187 @@ When your interviewer asks: *"What is the complexity?"*, follow this 3-step form
 
 ### Step 4: Discuss constraints and potential optimizations
 > *"If we want to optimize the auxiliary space to $O(1)$, we could sort the array in-place first, and then use a two-pointer approach. However, that would require modifying the input array, which might not be desirable depending on system requirements."*
+
+---
+
+## 11. Step-by-Step Complexity Calculation Examples
+
+Here are **7 common interview code patterns** with step-by-step explanations of how to calculate their Time and Space complexity.
+
+### 📐 Example 1: Nested Loops with Dynamic Boundaries
+This is a classic trap where the inner loop's boundary depends on the outer loop's index.
+```python
+def print_pairs_dynamic(n: int) -> None:
+    for i in range(n):                # Outer loop runs N times
+        for j in range(i + 1, n):    # Inner loop boundary changes dynamically
+            print(i, j)
+```
+*   **Time Complexity Step-by-Step:**
+    1.  When $i = 0$, the inner loop runs from $j = 1$ to $n-1$ (which is $n - 1$ times).
+    2.  When $i = 1$, the inner loop runs from $j = 2$ to $n-1$ (which is $n - 2$ times).
+    3.  When $i = n - 1$, the inner loop runs $0$ times.
+    4.  Total iterations = $(n-1) + (n-2) + (n-3) + \dots + 2 + 1 + 0$.
+    5.  Using the mathematical sum formula: $\text{Sum} = \frac{n(n-1)}{2} = \frac{n^2 - n}{2}$.
+    6.  Applying Rule 1 & 2 (drop constants and non-dominant terms): $\frac{n^2}{2} - \frac{n}{2} \to O(n^2)$.
+*   **Time Complexity:** $O(n^2)$
+*   **Auxiliary Space Complexity:** $O(1)$ (only simple variables `i` and `j` are used, no extra collections are created).
+
+---
+
+### 📐 Example 2: Two Independent Inputs
+Always look closely at the parameters. Are you looping over the same input, or two different inputs?
+```python
+def process_two_arrays(arr1: list, arr2: list) -> int:
+    total = 0
+    # First loop
+    for val in arr1:
+        total += val
+        
+    # Second loop
+    for val in arr2:
+        total += val
+        
+    return total
+```
+*   **Time Complexity Step-by-Step:**
+    1.  Let the size of `arr1` be $A$ and the size of `arr2` be $B$.
+    2.  The first loop is sequential and runs exactly $A$ times. Thus, its time complexity is $O(A)$.
+    3.  The second loop runs sequentially after the first and runs exactly $B$ times. Its complexity is $O(B)$.
+    4.  Using the **Rule of Sum** (Sequential Code): $\text{Total Time} = O(A) + O(B) = O(A + B)$.
+    5.  *Interview Tip:* Do not write $O(n)$ here unless $A = B$. If the inputs can be of different lengths, you must use both variables ($O(A + B)$).
+*   **Time Complexity:** $O(A + B)$ (Linear time relative to both inputs)
+*   **Auxiliary Space Complexity:** $O(1)$ (only the integer `total` is tracked).
+
+---
+
+### 📐 Example 3: Iterative Binary Search
+Understanding how loops that divide progress mathematically.
+```python
+def binary_search(arr: list, target: int) -> int:
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+```
+*   **Time Complexity Step-by-Step:**
+    1.  Let the size of the array be $n$.
+    2.  In each iteration of the `while` loop, we look at the middle element and discard half of the search space.
+    3.  Step 0: Size is $n$
+    4.  Step 1: Size is $n/2$
+    5.  Step 2: Size is $n/4$
+    6.  Step $k$: Size is $n/2^k$
+    7.  The loop stops when the size becomes $1$ (i.e., $\frac{n}{2^k} = 1 \implies n = 2^k$).
+    8.  Solving for $k$ using logarithms: $k = \log_2(n)$.
+*   **Time Complexity:** $O(\log n)$
+*   **Auxiliary Space Complexity:** $O(1)$ (we only update pointers `left`, `right`, and `mid` in-place).
+
+---
+
+### 📐 Example 4: Recursive Binary Search (Comparing Space)
+How recursion changes the memory footprint of an otherwise identical algorithm.
+```python
+def binary_search_recursive(arr: list, target: int, left: int, right: int) -> int:
+    if left > right:
+        return -1
+    mid = (left + right) // 2
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        return binary_search_recursive(arr, target, mid + 1, right)
+    else:
+        return binary_search_recursive(arr, target, left, mid - 1)
+```
+*   **Time Complexity Step-by-Step:**
+    1.  Just like the iterative version, the search space is divided by 2 at each recursive step.
+    2.  The recursion tree only has a single branch at each point (we either search left, or right, never both).
+    3.  Total operations = $O(\log n)$.
+*   **Space Complexity Step-by-Step:**
+    1.  Because this function calls itself recursively, each step creates a new stack frame in the call stack.
+    2.  The recursion continues until the search space size is $1$, which takes $\log_2(n)$ recursive calls.
+    3.  Since there will be $\log n$ active frames on the stack at the same time, the memory grows logarithmically.
+*   **Time Complexity:** $O(\log n)$
+*   **Auxiliary Space Complexity:** $O(\log n)$ (due to recursion call stack depth)
+
+---
+
+### 📐 Example 5: Loop Variable Multiplied/Divided
+Loops where the counter changes by a multiplication factor.
+```python
+def print_powers_of_two(n: int) -> None:
+    i = 1
+    while i < n:
+        print(i)
+        i = i * 2  # Counter is multiplied by 2
+```
+*   **Time Complexity Step-by-Step:**
+    1.  Let's write down the values that the variable `i` takes:
+        *   Iteration 1: $i = 1$
+        *   Iteration 2: $i = 2$
+        *   Iteration 3: $i = 4$
+        *   Iteration 4: $i = 8$
+        *   Iteration $k$: $i = 2^{k-1}$
+    2.  The loop terminates when $i \ge n$, meaning $2^{k-1} \ge n$.
+    3.  Taking the logarithm of both sides: $k - 1 \ge \log_2(n) \implies k \approx \log_2(n)$ steps.
+*   **Time Complexity:** $O(\log n)$
+*   **Auxiliary Space Complexity:** $O(1)$
+
+---
+
+### 📐 Example 6: Binary Tree Traversal (DFS)
+Recursion on nonlinear data structures.
+```python
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def preorder_traversal(root: TreeNode) -> None:
+    if not root:
+        return
+    print(root.val)                   # Constant time operation: O(1)
+    preorder_traversal(root.left)     # Recurse left
+    preorder_traversal(root.right)    # Recurse right
+```
+*   **Time Complexity Step-by-Step:**
+    1.  Let $n$ be the total number of nodes in the binary tree.
+    2.  The algorithm visits every node in the tree exactly once to print its value.
+    3.  For each node, we perform a constant number of operations ($O(1)$ print and null checks).
+    4.  Therefore, total time is proportional to the number of nodes: $O(n)$.
+*   **Space Complexity Step-by-Step:**
+    1.  The space is determined by the maximum depth of the call stack, which is equal to the height of the tree ($h$).
+    2.  **Worst Case:** In a skewed tree (where every node only has a left child, looking like a linked list), the height of the tree is $n$. The call stack will grow to $n$ active frames. Space is $O(n)$.
+    3.  **Best/Average Case:** In a balanced tree, the height is $\log_2(n)$. The call stack will only grow to $\log n$ active frames. Space is $O(\log n)$.
+*   **Time Complexity:** $O(n)$
+*   **Auxiliary Space Complexity:** $O(h)$ where $h$ is the height of the tree ($O(n)$ in the worst case, $O(\log n)$ in the best/balanced case).
+
+---
+
+### 📐 Example 7: Amortized Analysis (e.g., Dynamic Array Insertion)
+How to analyze algorithms that have rare, expensive operations but are cheap on average.
+```python
+def build_array_incrementally(n: int) -> list:
+    arr = []
+    for i in range(n):
+        arr.append(i)  # Python dynamically resizes the array under the hood
+    return arr
+```
+*   **Amortized Analysis Step-by-Step:**
+    1.  Normally, appending an element to the end of a list is $O(1)$ time because we just write to the next available block of memory.
+    2.  However, when the underlying array fills up, Python must allocate a new, larger block of memory (usually double the size) and copy all existing elements to the new block. This copy takes $O(k)$ time, where $k$ is the current size.
+    3.  This resize happens very rarely: only when the size of the array reaches a power of 2 ($2, 4, 8, 16, 32, \dots$).
+    4.  If we add up the total work done over $n$ appends:
+        *   Regular appends: $n$ operations of $O(1)$ cost = $n$ steps.
+        *   Resize copies: $1 + 2 + 4 + 8 + \dots + n/2 + n \approx 2n$ steps.
+    5.  Total steps for $n$ operations = $n + 2n = 3n$ steps.
+    6.  Average (amortized) cost per append = $\frac{3n}{n} = 3$ operations, which is constant!
+*   **Time Complexity:** $O(n)$ total (meaning $O(1)$ amortized per `append` operation).
+*   **Auxiliary Space Complexity:** $O(1)$ if we do not count the output array `arr`. If the output array is counted, the space complexity is $O(n)$.
+
+---

@@ -10,8 +10,8 @@ int main() {
         {13, 14, 15, 16}
     };
 
-    int n = matrix.size();
-    int m = matrix[0].size();
+    int n = matrix.size(); // row
+    int m = matrix[0].size(); // coloumn
 
     int top = 0, bottom = n - 1;
     int left = 0, right = m - 1;    

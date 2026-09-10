@@ -1,0 +1,3 @@
+
+ We are looking into W+ operation
+ It mean writing and then Reading
